@@ -1,0 +1,71 @@
+sudo apt update
+sudo -i
+
+# JAVA INSTALLATION
+sudo apt install openjdk-11-jre-headless
+
+java -version
+
+#Add the Jenkins repository to the package manager -
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+#After adding the repository link of Jenkins update the package manager
+sudo apt-get update
+
+#Then finally install Jenkins using the following command
+sudo apt-get install jenkins
+
+#status
+root@ip-172-31-45-143:~# systemctl status jenkins
+
+# starting jenkins server
+sudo systemctl start jenkins
+
+#status checking
+sudo systemctl status jenkins
+
+# Allow Jenkins Port On Ubuntu Firewall
+sudo ufw allow 8080
+sudo ufw status
+
+# If Inactive
+sudo ufw enable
+sudo ufw status
+
+# Password for jenkins in the directory.
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
